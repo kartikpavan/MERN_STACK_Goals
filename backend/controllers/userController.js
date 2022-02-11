@@ -66,10 +66,12 @@ const loginUser = asyncHandler(async (req, res) => {
 });
 
 // @Desc      get new user
-// @route     GET  /api/users
+// @route     GET  /api/users/me
 // @access    Private
 const getMe = asyncHandler(async (req, res) => {
-  res.json({ message: "user Data" });
+  const { _id, email, name } = await User.findById(req.user.id); //! we got access to user.id from authMiddleware
+
+  res.status(200).json({ id: _id, name, email });
 });
 
 //Generate JWT token
