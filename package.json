@@ -1,0 +1,16 @@
+{
+  "name": "mern_stack_1",
+  "version": "1.0.0",
+  "description": "Goalsetter MERN App ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "author": "Divya Kartik",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1"
+  }
+}
